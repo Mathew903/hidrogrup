@@ -1,0 +1,50 @@
+---
+import Layout from '../components/Layout.astro';
+import FormContact from '../components/FormContact';
+import portada from '/contacto/portada.jpg'
+---
+
+<Layout title={["¿Que podemos hacer por ti?", "We want to hear you"]} slider={false} img={portada}>
+	<div class="mx-auto my-10 px-10">
+		<div class="mb-5">
+			<!-- <h2 class="text-3xl font-semibold uppercase title-contact">We want to hear you</h2>
+			<p class="subtitle-contact text-xl font-light mb-1">We want to hear you</p> -->
+			<div class="max-w-4xl">
+				<p class="textContact">
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque,
+					eligendi? Eos consequatur laboriosam repellat, ullam itaque error
+					mollitia vero dolor deserunt velit? Quas sed cum quae dolorem. Quas,
+					ad fuga. Quidem, vel? Placeat, dolores. Deleniti modi ad quo dolorem
+					harum voluptatum cum id eum culpa velit sint aliquam facere veritatis
+					commodi, eveniet assumenda. Voluptatibus saepe, dolores odio dicta hic
+					doloribus. Expedita hic neque, provident incidunt minima fuga delectus
+					eligendi veniam saepe unde quibusdam sequi nobis facilis et molestiae
+					fugiat, culpa officia! Obcaecati et, similique quod voluptate
+					accusantium alias saepe nesciunt! Quae mollitia aspernatur molestiae
+					dignissimos animi adipisci. Earum
+				</p>
+			</div>
+		</div>
+		<div
+			class="flex md:flex-row flex-col shadow-lg shadow-gray-300 bg-white rounded-lg formulario"
+		>
+			<div class="px-8 py-10 border-t-2 border-[#4443e0] min-[880px]:w-4/6">
+				<h2 class="text-3xl font-bold mb-5 capitalize">
+					let's start the consultation
+				</h2>
+				<FormContact client:visible />
+			</div>
+			<div
+				class="md:py-10 py-4 pl-8 bg-[#4443E0] md:rounded-tr-lg rounded-bl-lg rounded-br-lg text-white min-[880px]:w-2/6"
+			>
+				<div class="flex flex-col gap-y-2 md:pr-4">
+					<h2 class="text-3xl font-medium mb-2">Contact info</h2>
+					<p>Lima 1749, Jose C Paz, ARG</p>
+					<p>+54 (011) 3371-4904</p>
+					<p>+54 (011) 3371-4904</p>
+					<h3 class="info-correo">mgarciapalcios607@gmial.com</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>

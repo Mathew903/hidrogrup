@@ -1,0 +1,46 @@
+---
+import Navbar from './Navbar';
+import Slider from './Slider.astro';
+interface Props {
+	message?: string | [string, string];
+	slider: boolean;
+	video?: string;
+	image?: string;
+}
+const { message, slider, video, image } = Astro.props;
+---
+
+<header class={`lg:relative w-full h-screen lg:h-3/5 ${slider && 'lg:h-full'}`}>
+	<Navbar client:visible />
+	<div class="curtain"></div>
+	{slider ? <Slider /> : (
+			<>
+				{video && !image && (
+					<video
+						src={video}
+						autoplay
+						loop
+						preload="metadata"
+						class="lg:h-full h-screen w-full object-cover -z-10"
+					/>
+				)}
+				{image && !video && (
+					<img
+						src={image}
+						alt="portada"
+						class="lg:h-full h-screen w-full object-cover -z-10"
+					/>
+				)}
+				<div class="flex flex-col justify-center items-center w-full h-full absolute top-0 title z-30 text-center text-white text-4xl 2xl:text-7xl">
+					<div class="lg:w-2/5 w-full">
+						{Array.isArray(message) ? (
+							<h2 class="uppercase title-banner mb-5">{message[0]}</h2>
+							<p class="subtitle-contact text-2xl font-light mb-1">{message[1]}</p>
+						) : <h2 class="uppercase title-banner ">{message}</h2>
+					}
+					</div>
+				</div>
+			</>
+		)
+	}
+</header>

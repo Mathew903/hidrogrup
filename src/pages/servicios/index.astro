@@ -1,0 +1,24 @@
+---
+import Layout from '../../components/Layout.astro';
+import videoServicios from '/videos/video_servicios.mp4';
+import CardServicios from '../../components/CardServicios.astro';
+import servicios from '../../utils/servicios';
+---
+
+<Layout title="servicios" slider={false} video={videoServicios}>
+	<div class="flex flex-col justify-center items-center py-20">
+        <div class="max-w-[1150px] px-10 xl:px-0">
+            <h1 class="text-lg">Titulo</h1>
+            <h3 class="font-medium">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam
+                placeat explicabo exercitationem vero rem, porro impedit voluptates
+                error, ullam, architecto ut reiciendis odio? Laboriosam tenetur
+                repellat vitae eaque, natus veniam. Magnam unde, nostrum nihil a
+                quisquam ullam iure numquam rerum animi cumque quas. Possimus fuga
+                officia eligendi distinctio qui obcaecati deserunt commodi asperiores
+                facere atque eius voluptate delectus, ducimus cumque.
+            </h3>
+        </div>
+		<div class="card-service gap-x-10 px-10">{servicios.map(servicio => <CardServicios servicio={servicio} />)}</div>
+	</div>
+</Layout>

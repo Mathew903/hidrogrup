@@ -1,0 +1,27 @@
+---
+    interface Props { id: number, img: string, title: string, subtitle: string }
+    const {id, img, title, subtitle} = Astro.props
+    import Button from './Button.astro';
+    const texts = subtitle.split('.')
+---
+
+<li class="slide-visible">
+    <div id={`slide${id}`}>
+        <img src={img} alt={img} class="xl:h-full h-screen w-full object-cover -z-10">
+        <div class="flex flex-col items-center w-full">
+            <div class="flex flex-col h-full justify-center absolute top-0 title z-30 text-white lg:w-7/12 w-full items-center lg:items-start gap-y-4 px-8 sm:px-0 pt-20">
+                <h2 class="text-4xl md:text-5xl lg:text-7xl">{title}</h2>
+                <div class="w-3/5">
+                    {texts.map(text => 
+                        <div class="block mb-2">
+                            <span class="text-xl font-light">{text}.</span>
+                        </div>
+                    )}
+                    <div class="mt-4">
+                        <Button />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>

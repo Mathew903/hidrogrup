@@ -1,0 +1,82 @@
+---
+import Layout from '../components/Layout.astro';
+import Separator from '../components/Separator.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout slider={true}>
+	<div class="w-full h-fit">
+		<div
+			class="p-6 text-main flex flex-col justify-center items-center text-center w-full h-80 bg-[#111E47] text-white"
+		>
+			<h2
+				class="title-text-main subtitle md:text-[42px] sm:text-4xl text-3xl uppercase mb-4"
+			>
+				bienvenidos a Hidrogrup
+			</h2>
+			<Separator width="w-32" />
+			<div class="lg:w-7/12 md:w-2/3 w-4/5 mt-4">
+				<p class="xl:text-lg text-base text-start subtitle-main">
+					Trabajamos para ayudar a las necesidades de nuestros clientes, donde
+					Investigamos, innovamos y desarrollamos soluciones tecnológicas que le
+					permitan poder hacer frente a un mercado cada vez más competitivo,
+					proporcionando beneficios en la calidad final de los productos, mayor
+					rentabilidad al generar la mayor cantidad de productos en el menor
+					tiempo posible, con el fin de reducir los costes, seguridad respecto a
+					bienes y personas con el menor impacto ambiental.
+				</p>
+			</div>
+		</div>
+		<div
+			class="flex flex-col gap-y-4 md:gap-0 lg:gap-x-10 md:flex-row w-full md:justify-between md:items-center mb-8 md:h-3/5 h-fit"
+		>
+			<img
+				src="/inicio/futuro_hoy.jpg"
+				alt="img-presentation"
+				class="md:w-1/2 w-full object-cover md:h-full h-1/2"
+			/>
+			<div
+				class="container-description flex justify-center lg:justify-start flex-wrap items-center md:w-1/2 h-full md:p-4 lg:p-0"
+			>
+				<div class="flex flex-col w-5/6 lg:p-4 h-full lg:justify-center">
+					<h2 class="xl:text-[30px] text-2xl text-[#FFB341]">
+						El futuro es hoy
+					</h2>
+					<p class="font-light text-[#999999] xl:text-base text-sm">
+						Agricultura de precisión para alcanzar un mundo más sostenible.
+					</p>
+					<Separator width="w-full" />
+					<div
+						class="text-[#111e47] font-normal flex flex-col items-center gap-y-5 text-sm xl:text-base"
+					>
+						<p>
+							Uno de los mayores desafíos de nuestro tiempo es el impacto que ha
+							generado el cambio climático en la agricultura a nivel mundial.
+						</p>
+						<p>
+							Contamos con herramientas que identifican qué sistemas, procesos o
+							máquinas en específico presentan un potencial de mejora o ahorro,
+							que se pueden lograr por ajustes operativos o sustitución
+							tecnológica.
+						</p>
+						<p>
+							Disponemos de variadas alternativas de producción agrícola desde
+							naves de cultivos de hortalizas a cabinas hidropónicas para la
+							producción de FVH. <br/> Soluciones de Bombeo Solar con Tecnología de
+							uso industrial entre muchas más.
+						</p>
+						<p>
+							El mejor momento para sumarse al futuro, es ahora: conviértase en
+							una empresa digital y manténgase a la vanguardia de la
+							competencia.
+						</p>
+					</div>
+					<!-- <div class="mt-5">
+						<Button />
+					</div> -->
+				</div>
+			</div>
+		</div>
+		<div></div>
+	</div>
+</Layout>

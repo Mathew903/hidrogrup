@@ -1,0 +1,6 @@
+---
+	interface Props { width: string, style?: object }
+	const { width, style = {}, ...props } = Astro.props as Props
+---
+
+<span class={`${width} h-1 bg-[#FFB341] lg:my-6 my-4`} style={style} {...props}></span>

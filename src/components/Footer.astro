@@ -1,0 +1,68 @@
+---
+    import {BsFillTelephoneFill} from 'react-icons/bs'
+    import {ImPrinter} from 'react-icons/im'
+    import {MdEmail} from 'react-icons/md'
+    import {SiHomeassistantcommunitystore} from 'react-icons/si'
+    import {BiCopyright} from 'react-icons/bi'
+    import SocialLinks from './SocialLinks.astro'
+    import { appLinks } from '../utils/links'
+---
+
+<footer class="w-full h-auto flex flex-col gap-5 justify-center text-[#757575] bg-[#FBFBFB]">
+    <div class="flex sm:flex-row flex-col justify-center sm:justify-between items-center gap-y-4 sm:gap-0 py-6 border-b-[1px]">
+        <h3 class="sm:ml-10">Get connected with us on social networks</h3>
+        <SocialLinks />
+    </div>
+    <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-y-10 sm:gap-y-10 md:gap-0 md:grid-cols-[200px_1fr_1fr_1fr] justify-items-center">
+        <h2>Hidrogrup</h2>
+        <div class="flex flex-col gap-y-5 text-lg">
+            <h2>Products</h2>
+            <h3>Forraje</h3>
+            <h3>NFT</h3>
+            <h3>Acuaponia</h3>
+            <h3>Aeroponia</h3>
+        </div>
+        <div class="flex flex-col gap-y-5">
+            <h2>Useful links</h2>
+            {appLinks.map(({url, name, Icon}) => (
+                <a href={url} class="hover:font-semibold hover:text-black flex items-center gap-x-2">
+                    <Icon />
+                    {name}
+                </a> 
+            ))}
+        </div>
+        <div class="flex flex-col gap-y-5 text-center md:text-start">
+            <h2>Contact</h2>
+            <div class="flex items-center gap-x-3">
+                <SiHomeassistantcommunitystore client:visible/>
+                <h3>Jose C. Paz 1749, Bs. As, ARG</h3>
+            </div>
+            <div class="flex items-center gap-x-3">
+                <MdEmail client:visible/>
+                <h3>info@hidrogrup.com</h3>
+            </div>
+            <div class="flex items-center gap-x-3">
+                <BsFillTelephoneFill client:visible/>
+                <h3>+54 11 3371-4904</h3>
+            </div>
+            <div class="flex items-center gap-x-3">
+                <ImPrinter client:visible/>
+                <h3>+54 11 904-511</h3>
+            </div>
+        </div>
+    </div>
+    <div class="w-full py-6 text-[#4f4f4f] bg-[#000000] bg-opacity-[5%]"> 
+        <div class="w-full h-full justify-center flex items-center gap-x-1">
+            <BiCopyright client:visible/>
+            <h3>2022 Copyright: <span class="font-bold">Hidrogrup.com.ar</span></h3>
+        </div>
+    </div>
+</footer>
+
+<style>
+    h2 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 18px;
+    }
+</style>

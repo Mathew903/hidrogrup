@@ -1,0 +1,26 @@
+{
+  "name": "hidrogrup_app",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^2.1.0",
+    "@astrojs/tailwind": "^3.1.1",
+    "@emailjs/browser": "^3.10.0",
+    "@types/react": "^18.0.29",
+    "@types/react-dom": "^18.0.11",
+    "astro": "^2.1.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.0",
+    "react-icons": "^4.8.0",
+    "react-phone-input-2": "^2.15.1",
+    "tailwindcss": "^3.2.7"
+  }
+}

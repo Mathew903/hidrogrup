@@ -1,0 +1,43 @@
+---
+import ener_solar from '/inicio/ener_solar.jpg'
+import control_industrial from '/inicio/control_industrial.jpg'
+import agro_tecnologias from '/inicio/agro_tecnologias.jpg'
+import Slide from './Slide.astro';
+// slider-nav-autopause
+---
+
+<div
+	class="swiffy-slider slider-item-ratio slider-item-ratio-21x9 slider-item-nogap slider-item-nosnap-touch slider-nav-autoplay slider-indicators-round h-screen xl:h-auto"
+	data-slider-nav-autoplay-interval="10000"
+>
+	<ul class="slider-container">
+		<Slide
+			id={1}
+			title="Energía solar"
+			subtitle="Segura, Limpia e ilimitada. Desarrollamos proyectos completos a partir de fuentes renovables. Experiencia, habilidades y conocimientos, podemos ayudarte"
+			img={ener_solar}
+		/>
+		<Slide
+			id={2}
+			title="Agrotecnologias"
+			subtitle="Cultivando la Innovación, “Aportando a la seguridad alimentaria”. Brindamos equipamientos para cultivos hidropónicos de FVH y producción de hortalizas. Soluciones tecnológicas entre otras, basada en datos que ayudan a lograr una alta productividad, que llevan la agricultura a otro nivel y la solución ante el cambio climático"
+			img={agro_tecnologias}
+		/>
+		<Slide
+			id={3}
+			title="Control industrial"
+			subtitle="Ya sea consultoría, ingeniería o puesta en marcha, nuestro objetivo es maximizar de forma segura el rendimiento de su equipo y la eficiencia de sus instalaciones. Eche un vistazo más de cerca a nuestras soluciones"
+			img={control_industrial}
+		/>
+	</ul>
+	<!-- Botones(flechas) - siguiente/atras 
+    <button type="button" class="slider-nav z-30"></button>
+    <button type="button" class="slider-nav slider-nav-next z-30"></button> 
+    -->
+	<!-- "Botones" que indican la posicion del slide 
+    <ul class="slider-indicators z-50">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+    </ul> -->
+</div>

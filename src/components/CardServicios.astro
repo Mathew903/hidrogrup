@@ -1,0 +1,31 @@
+---
+    const { servicio } = Astro.props
+    const {url, media, title, firstSub, firstDesc, video} = servicio
+---
+
+<a href={url}>
+    <div class="flex flex-col my-10 shadow-lg hover:shadow-2xl hover:cursor-pointer h-[450px] rounded-lg relative">
+        <div class="relative">
+            {video 
+                ? <video 
+                    src={media} 
+                    autoplay 
+                    loop 
+                    preload="metadata"
+                    class="rounded-t-lg z-10 h-56 w-full object-cover"
+                    ></video> 
+                : <img src={media} alt="img_card1" class="rounded-t-lg z-10 h-56 w-full object-cover" />
+            }
+            <div class="opacity-50 rounded-t-lg top-0 left-0 absolute h-full w-full bg-black z-20"></div>
+            <div class="top-0 left-0 w-full h-full absolute flex justify-center items-center text-white">
+                <h2 class="text-3xl font-semibold z-30">{title}</h2>
+            </div>
+        </div>
+        <div class="flex flex-col mx-4 mt-2 gap-y-1">
+            <h3 class="text-2xl font-medium">{firstSub}</h3>
+            <small class="font-extralight text-sm">
+                {firstDesc[0].slice(0, 200)}...
+            </small>
+        </div>
+    </div>
+</a>

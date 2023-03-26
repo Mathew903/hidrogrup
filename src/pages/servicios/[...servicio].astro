@@ -1,0 +1,31 @@
+---
+    import servicios from "../../utils/servicios";
+    import Layout from "../../components/Layout.astro";
+    import type { servicies } from "../../types";
+    
+    export function getStaticPaths() {
+        return servicios.map(({servicio, ...serv}) => ({
+            params: {servicio},
+            props: serv
+        }))
+    }
+
+    const {title, video, media, firstDesc, firstSub, secondDesc, secondSub} = Astro.props as servicies
+
+---
+
+<Layout title={title} slider={false} img={!video && media} video={video && media}>
+    <div class="w-full flex flex-col items-center service bg-[#FDFEFF]">
+        <section class="xl:w-1/2 w-3/4 py-20">
+            <h1 class="text-[#111111] text-4xl mb-3">Cómo leer el contenido de un archivo en Deno</h1>
+            <div>
+                {firstDesc.map(desc => <p class="text-lg font-extralight mb-3 text-[#333333]">{desc}.</p>)}
+                <h2 class="text-2xl font-medium mb-3 text-[#0e578f]">{firstSub}</h2>
+            </div>
+            <div>
+                {secondDesc.map(desc => <p class="text-lg font-extralight mb-3 text-[#333333]">{desc}.</p>)}
+                <h2 class="text-2xl font-medium text-[#0e578f]">{secondSub}</h2>
+            </div>
+        </section>
+    </div>
+</Layout>

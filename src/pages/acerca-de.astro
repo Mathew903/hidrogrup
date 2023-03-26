@@ -1,0 +1,173 @@
+---
+import Layout from '../components/Layout.astro';
+import Separator from '../components/Separator.astro';
+import aboutMission from '/About_mission.jpg';
+import img7 from '/img7.jpg';
+import prof1 from '/Eido.png';
+import prof2 from '/Assaf.png';
+import portada from '/acerca_de/portada.jpg'
+---
+
+<Layout title="Acerca de" img={portada} slider={false}>
+	<div class="flex flex-col justify-center items-center container-our">
+		<section
+			class="2xl:w-[1296px] lg:w-[950px] md:w-[700px] sm:w-[550px] w-[470px] max-[560px]:w-[400px] max-[460px]:w-[360px] max-[400px]:w-[330px] flex flex-col items-center lg:my-40 my-24 relative"
+		>
+			<section
+				class="grid 2xl:grid-cols-[580px_580px] lg:grid-cols-[450px_420px] 2xl:gap-x-[135px] lg:gap-x-[90px] gap-y-10 lg:gap-y-0 mb-8"
+			>
+				<div class="flex flex-col 2xl:gap-y-12 gap-y-6 2xl:text-lg text-base">
+					<h2 class="2xl:text-5xl text-4xl font-semibold">Our Mission</h2>
+					<p class="font-extralight">
+						Ecommerce has transformative powers, and we believe everyone should
+						be able to take part. But outdated solutions and overwhelmed systems
+						create uncertainty and risk.
+					</p>
+					<span class="font-semibold">
+						We empower businesses to realize the full potential of eCommerce by
+						making it safe, accessible, and frictionless.
+					</span>
+					<p class="font-extralight">
+						We’ve built an eCommerce risk management platform that allows online
+						merchants to create trusted relationships with consumers. Leveraging
+						machine learning, our platform aggregates data from many of the
+						world’s largest online merchants and creates network effects that
+						drive higher sales and generate cost savings for our merchants. By
+						accurately identifying the individuals behind online interactions,
+						our technology enables merchants to provide frictionless customer
+						experiences.
+					</p>
+				</div>
+				<div>
+					<img
+						src={aboutMission}
+						class="lg:w-full w-[400px] 2xl:h-[680px] h-[400px] lg:h[600px] object-cover rounded-sm"
+						alt="img-our"
+					/>
+				</div>
+			</section>
+			<Separator
+				width="w-full"
+				style={{ backgroundColor: '#EEEEEE', height: '1px' }}
+			/>
+			<section class="md:mt-20 mt-6 flex flex-col items-center">
+				<h2 class="text-5xl font-semibold">Our History</h2>
+				<div
+					class="flex flex-col mt-6 gap-y-6 2xl:text-lg lg:text-base font-extralight"
+				>
+					<p>
+						Eido Gal and Assaf Feldman created Riskified in 2013 to improve
+						eCommerce for merchants and consumers. Shopping had changed
+						dramatically, and legacy approaches couldn’t keep up. They believed
+						there was a better way.
+					</p>
+					<p>
+						Riskified began as a fraud solution, helping merchants approve
+						orders they would have declined. We now protect customers from
+						malicious account takeover attacks, combat payment failures at
+						checkout, help merchants block abuse while upholding
+						consumer-friendly policies and more.
+					</p>
+					<p>
+						Our global team helps the world’s most-innovative eCommerce
+						merchants eliminate risk and uncertainty from their business. We
+						remain committed to expanding the transformative powers of commerce.
+					</p>
+				</div>
+				<section
+					class="grid 2xl:grid-cols-[580px_580px] lg:grid-cols-[450px_450px] 2xl:gap-x-[100px] lg:gap-x-[60px] gap-y-10 lg:gap-y-0 mt-16"
+				>
+					<div>
+						<img
+							src={img7}
+							alt="our_history"
+							class="h-[380px] lg:h-full w-full object-cover"
+						/>
+					</div>
+					<div
+						class="flex flex-col gap-y-8 2xl:text-lg text-base font-extralight"
+					>
+						<h2 class="2xl:text-3xl text-xl font-bold">
+							Record and send videos to reach prospects, connect with customers,
+							and change the way you work
+						</h2>
+						<p>
+							Vidyard is built for business. Our platform goes beyond just video
+							hosting and management. Connect with viewers through personalized
+							video experiences. Explore analytical insights about your
+							audience. Turn those insights into action through integrations
+							with top enterprise tools. Prove the impact of your video
+							programs.
+						</p>
+						<p>
+							Global leaders and industry pioneers on the Fortune 500 list and
+							beyond rely on Vidyard to power their video strategies and turn
+							viewers into customers.
+						</p>
+					</div>
+				</section>
+			</section>
+		</section>
+		<section class="w-full bg-[#475066] text-white flex flex-col items-center">
+			<h2
+				class="text-center 2xl:text-6xl lg:text-5xl text-4xl font-semibold mt-10"
+			>
+				Our Leadership
+			</h2>
+			<div class="2xl:w-[1296px] lg:w-[1024px] w-full">
+				<section class="flex flex-col items-center">
+					<div
+						class="flex sm:flex-row flex-col justify-center items-center mt-20 lg:gap-x-14 sm:gap-x-12 gap-y-10 sm:gap-y-0"
+					>
+						<div>
+							<img
+								src={prof1}
+								alt="first CEO"
+								class="object-cover lg:w-72 sm:w-60 w-56"
+							/>
+						</div>
+						<div class="sm:w-2/5 w-3/5">
+							<h2 class="lg:text-3xl text-2xl font-bold">Horacio Garcia</h2>
+							<h3 class="text-md font-light">CEO & Co-Founder</h3>
+							<p class="mt-4 lg:text-lg text-base font-extralight">
+								Eido is the CEO and co-founder of Riskified. He determines
+								company strategy and oversees all aspects of the business. Since
+								co-founding Riskified in his apartment less than a decade ago,
+								Eido has overseen its growth into a company that partners with
+								some of the world’s most recognizable retail brands, including 3
+								of the 10 largest eCommerce merchants.
+							</p>
+						</div>
+					</div>
+					<div
+						class="flex sm:flex-row flex-col justify-center items-center my-20 lg:gap-x-20 sm:gap-x-12 gap-y-10 sm:gap-y-0"
+					>
+						<div>
+							<img
+								src={prof2}
+								alt="second CEO"
+								class="object-cover lg:w-72 sm:w-60 w-56"
+							/>
+						</div>
+						<div class="sm:w-2/5 w-3/5">
+							<h2 class="lg:text-3xl text-2xl font-bold">Gonzalo Acuña</h2>
+							<h3 class="text-md font-light">CEO & Co-Founder</h3>
+							<p class="mt-4 lg:text-lg text-base font-extralight">
+								Assaf is the CTO and co-founder of Riskified. He leads the
+								Product Development and Technology teams. Under his leadership,
+								Riskified has built an eCommerce risk management platform with
+								proprietary machine learning models that drive an automated
+								decisioning engine supporting its eCommerce risk mitigation
+								suite of products. Assaf brings two decades of experience
+								developing robust systems with ML algorithms and intelligent UIs
+								for risk management applications. He was selected to be a
+								research scientist for the Ambient Intelligence group at MIT’s
+								Media Lab.
+							</p>
+						</div>
+					</div>
+				</section>
+			</div>
+		</section>
+	</div>
+</Layout>

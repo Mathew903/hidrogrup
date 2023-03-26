@@ -1,0 +1,12 @@
+---
+	import { socialLinks } from '../utils/links';
+---
+
+<div class="flex items-center sm:mr-10 gap-x-6 text-xl">
+	{socialLinks.map(({ url, Icon, colorHover }) => (
+		<a href={url} target="_blank" class={colorHover}>
+			<Icon />
+		</a>
+	))}
+</div>
+

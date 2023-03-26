@@ -1,0 +1,33 @@
+---
+import '../../fonts/SegoeUI/style.css';
+import '../style/global.css';
+import Head from './Head.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+interface Props {
+	title?: string | [string, string];
+	slider: boolean;
+	video?: string;
+	img?: string;
+}
+const { title, slider, video, img } = Astro.props;
+---
+
+<html lang="es">
+	<Head title={title} />
+	<body>
+		<div class="flex flex-col w-full h-screen">
+			<Header
+				message={title}
+				slider={slider}
+				video={video && video}
+				image={img && img}
+			/>
+			<slot />
+			<Footer />
+		</div>
+	</body>
+	<!-- import pathStyle from '../utils/pathStyle.json'
+const location = Astro.request.url.substring(21)
+const { title, msgBanner } = pathStyle.filter(p => p.url === location)[0]; -->
+</html>
