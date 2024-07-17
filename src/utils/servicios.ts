@@ -4,7 +4,7 @@ const servicios: servicies[] = [
     {
         servicio: 'hidroponia',
         url: '/servicios/hidroponia',
-        title: 'Hidroponia',
+        title: 'Agro',
         firstSub: '¿Como nos desarrollamos en esta area?',
         firstDesc: ['Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum'],
         secondSub: 'Areas importantes a tener encuenta',
@@ -15,7 +15,7 @@ const servicios: servicies[] = [
     {
         servicio: 'forraje-verde',
         url: '/servicios/forraje-verde',
-        title: 'Forraje verde',
+        title: 'Industrial',
         firstSub: '¿Como nos desarrollamos en esta area?',
         firstDesc: ['Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto', 'Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original', 'Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum'],
         secondSub: 'Areas importantes a tener encuenta',
@@ -26,7 +26,7 @@ const servicios: servicies[] = [
     {
         servicio: 'paneles-solares',
         url: '/servicios/paneles-solares',
-        title: 'Paneles Solares',
+        title: 'Energía Solar',
         titlePage: 'servicios | paneles solares',
         firstSub: '¿Como nos desarrollamos en esta area?',
         firstDesc: ['Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen', 'No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original', 'Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum'],
