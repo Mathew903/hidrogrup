@@ -1,0 +1,28 @@
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #fff;
+  z-index: 1000;
+  position: fixed;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background-color: rgb(17 24 39);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    z-index: -1;
+  }
+
+  &.scrolled {
+    color: #000;
+  }
+
+  &.scrolled::before {
+    transform: translateY(0);
+  }
+}

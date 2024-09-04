@@ -4,7 +4,7 @@ interface Props {
 }
 
 const Links = ({ sidebar = false }: Props) => (
-	<ul className={sidebar ? 'mx-auto sm:m-0' : 'lg:flex gap-x-5 hidden'}>
+	<ul className={sidebar ? 'mx-auto sm:m-0 sm:block flex flex-col gap-y-5' : 'lg:flex gap-x-5 hidden'}>
 		{appLinks.map(({ name, url, Icon }) => (
 			<li className="links uppercase " key={name}>
 				<a
@@ -16,7 +16,7 @@ const Links = ({ sidebar = false }: Props) => (
 					} relative gap-x-3 text-slate-300 hover:text-white text-2xl sm:text-base tracking-wide font-medium`}
 				>
 					{sidebar && <Icon />}
-					{name}
+					{name}	
 				</a>
 			</li>
 		))}

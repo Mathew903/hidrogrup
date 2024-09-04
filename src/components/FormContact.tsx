@@ -1,20 +1,14 @@
-import { useRef, FormEvent, useState, ChangeEvent } from 'react';
+import { useRef, type FormEvent, useState, type ChangeEvent } from 'react';
 import emailjs from '@emailjs/browser';
 import toast, { Toaster } from 'react-hot-toast';
-
-import InputContact from './InputContact';
+import { InputContact } from './InputContact';
+import type { formData } from '../types';
 
 const INITIAL_VALUE = { name: '', email: '', phone: '', message: '' };
-interface formData {
-	name: string;
-	email: string;
-	message: string;
-	phone: string;
-}
 
-const FormContact = () => {
+export const FormContact = () => {
 	const [data, setData] = useState<formData>(INITIAL_VALUE);
-	const form = useRef();
+	const form = useRef<HTMLFormElement>();
 	const serviceID = import.meta.env.PUBLIC_SERVICE_ID;
 	const templateID = import.meta.env.PUBLIC_TEMPLATE_ID;
 	const publicKey = import.meta.env.PUBLIC_KEY;
@@ -25,7 +19,7 @@ const FormContact = () => {
 
 	const sendEmail = (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		const myPromise = emailjs.sendForm(serviceID, templateID, form.current, publicKey);
+		const myPromise = emailjs.sendForm(serviceID, templateID, form.current, {publicKey});
 		toast.promise(myPromise, {
 			loading: 'Loading',
 			success: 'success',
@@ -92,5 +86,3 @@ const FormContact = () => {
 		</>
 	);
 };
-
-export default FormContact;

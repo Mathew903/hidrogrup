@@ -20,3 +20,10 @@ export type servicies = {
     titlePage: string,
     video?: boolean
 }
+
+export type formData = {
+	name: string;
+	email: string;
+	message: string;
+	phone: string;
+}

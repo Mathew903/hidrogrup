@@ -1,14 +1,16 @@
 import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp } from 'react-icons/fa';
-import { SiHomeassistant } from 'react-icons/si'
 import { BsFillPersonFill, BsFillPhoneFill } from 'react-icons/bs'
+import { SiHomeassistant } from 'react-icons/si'
 import {MdOutlineHomeRepairService} from 'react-icons/md'
+import { FaBagShopping } from "react-icons/fa6";
 import type { Link, iconLinks } from '../types';
 
 export const appLinks: Link[] = [
 	{ name: 'Inicio', url: '/', Icon: () => <SiHomeassistant /> },
-	{ name: 'Acerca de', url: '/acerca-de', Icon: () => <BsFillPersonFill />},
 	{ name: 'Servicios', url: '/servicios', Icon: () => <MdOutlineHomeRepairService /> },
+	{ name: 'Acerca de', url: '/acerca-de', Icon: () => <BsFillPersonFill />},
 	{ name: 'Contacto', url: '/contacto', Icon: () => <BsFillPhoneFill />},
+	{ name: 'Tienda', url: '/tienda', Icon: () => <FaBagShopping />},
 ];
 
 export const socialLinks: iconLinks[] = [

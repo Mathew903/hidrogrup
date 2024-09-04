@@ -1,8 +1,8 @@
-import 'react-phone-input-2/lib/style.css';
+import {theme} from '../theme';
 import PhoneInput from 'react-phone-input-2';
-import theme from '../theme';
+import 'react-phone-input-2/lib/style.css';
 
-const InputContact = ({ type = 'input', ...props }) => {
+export const InputContact = ({ type = 'input', ...props }) => {
 	return (
 		<>
 			{type === 'input' && (
@@ -15,7 +15,8 @@ const InputContact = ({ type = 'input', ...props }) => {
 			)}
 			{type === 'inputPhone' && (
 				<PhoneInput
-					country={'ar'}
+					country='ar'
+					regions={['south-america', 'north-america']}
 					inputProps={{ name: 'phone', required: true }}
 					placeholder="phone"
 					inputClass={theme.inputStyleDefault}
@@ -37,5 +38,3 @@ const InputContact = ({ type = 'input', ...props }) => {
 		</>
 	);
 };
-
-export default InputContact;

@@ -10,7 +10,7 @@ interface Props {
 	video?: string;
 	img?: string;
 }
-const { title, slider, video, img } = Astro.props;
+const { title, slider, video, img } = Astro.props as Props;
 ---
 
 <html lang="es">
